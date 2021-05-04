@@ -15,6 +15,12 @@ if ('127.0.0.1' !== gethostbyname($_SERVER['SERVER_NAME'])) {
     die('Danger! Remove WP Dev Plugin!');
 }
 
+if (isset($_GET['phpinfo'])) {
+    phpinfo();
+    die();
+}
+
+
 /**
  * Disable WordPress heartbeat for uninterrupted debugging.
  */
